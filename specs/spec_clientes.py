@@ -1,5 +1,5 @@
 import sys
-sys.path.append('./app')
+sys.path.append('app')
 import unittest
 from should_dsl import should
 from cliente import Clientes
