@@ -1,20 +1,22 @@
---------------------------
+
 Trabalho da Disciplina.: 
-	Laboratorio OO
+   Laboratorio OO
 	
 Professor.:
-	Fábio Duncan
+   Fábio Duncan
 
 Linguagem:
-	python
+   python
 
 Ferramenta de Testes:
-	unittest
-	specloud
+   unittest
+   specloud
 
 Desenvolvedores.:
-	Alexandre Sampaio, Laís Stellet, Isabela Campos
---------------------------
+   Alexandre Sampaio,
+   Laís Stellet,
+   Isabela Campos
+
 
 
 Mini-Mundo 1:
