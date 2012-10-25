@@ -13,9 +13,7 @@ Ferramenta de Testes:
 	specloud
 
 Desenvolvedores.:
-	Alexandre Sampaio,
-	Laís Stellet,
-	Isabela Campos
+	Alexandre Sampaio, Laís Stellet, Isabela Campos
 --------------------------
 
 
