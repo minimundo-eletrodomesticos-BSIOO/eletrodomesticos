@@ -36,6 +36,7 @@ class Venda(object):
 			if Produto.estoque[indice].marca == self.marca_prod:
 				for x in range(quantidade):
 					if len(Produto.estoque[indice].numeros_de_serie) >= 1:
+						
 						self.lista_vendas_2.append(Produto.estoque[indice].numeros_de_serie[quantidade-1])
 						produto = str(Produto.estoque[indice].numeros_de_serie[quantidade-1])
 						Produto.estoque[indice].numeros_de_serie.remove(produto)

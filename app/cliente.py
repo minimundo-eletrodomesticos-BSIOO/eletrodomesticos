@@ -1,15 +1,15 @@
 #-*-coding:utf-8-*-
-class Clientes(object):
+class Cliente(object):
 	relacao_clientes = []
 	def __init__(self,nome, endereco):
 		self.nome = nome
 		self.endereco = endereco
-		Clientes.insert_clientes(self)
+		Cliente.insert_clientes(self)
 		
 
 	@classmethod
 	def insert_clientes(cls, relacao_clientes):
-		Clientes.relacao_clientes.append(relacao_clientes)
+		Cliente.relacao_clientes.append(relacao_clientes)
 		
 		
 	def consulta_clientes(self):
