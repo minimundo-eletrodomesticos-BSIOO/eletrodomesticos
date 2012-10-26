@@ -1,4 +1,5 @@
 #-*-coding:utf-8-*-
+
 class Cliente(object):
 	relacao_clientes = []
 	def __init__(self,nome, endereco):

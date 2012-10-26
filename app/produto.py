@@ -1,4 +1,5 @@
 #-*-coding:utf-8-*-
+
 class Produto(object):
 	estoque = []
 	numeros_de_serie = []
