@@ -37,5 +37,5 @@ class Produto(object):
 		qt_disponivel = 0
 		for x in range(len(Produto.estoque)):
 			if (Produto.estoque[x].marca == marca) and (Produto.estoque[x].modelo == modelo):
-				qt_disponivel = self.estoque[x].quantidade
+				qt_disponivel += self.estoque[x].quantidade
 		return qt_disponivel

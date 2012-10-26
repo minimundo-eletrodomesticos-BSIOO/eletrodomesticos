@@ -38,6 +38,4 @@ class Venda(object):
 						produto = str(Produto.estoque[indice].numeros_de_serie[quantidade-1])
 						Produto.estoque[indice].numeros_de_serie.remove(produto)
 					else:
-						return "impossivel vender"
-	
-		
+						return "impossivel vender"	
