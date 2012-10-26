@@ -1,5 +1,5 @@
 #-*-coding:utf-8-*-
-#Classe responsavel pela organização dos clientes
+
 class Cliente(object):
 	relacao_clientes = []
 	def __init__(self,nome, endereco):

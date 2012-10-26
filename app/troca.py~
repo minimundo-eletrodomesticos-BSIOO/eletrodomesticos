@@ -1,6 +1,5 @@
 #-*-coding:utf-8-*-
 #Classe responsavel pela Troca de produtos que estejam na garantia
-
 from datetime import *
 from cliente import Cliente
 from produto import Produto
