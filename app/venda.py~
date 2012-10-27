@@ -37,7 +37,7 @@ int(data_via_string[0:2]))
 	def fazer_venda(self):
 		for indice in range(len(Produto.estoque)):
 			if Produto.estoque[indice].marca == self.marca_prod:
-				if len(Produto.estoque[indice].numeros_de_serie) > 1:
+				if len(Produto.estoque[indice].numeros_de_serie) >= 1:
 					self.lista_vendas_2.append(Produto.estoque[indice].numeros_de_serie[-1])
 					produto = str(Produto.estoque[indice].numeros_de_serie[-1])
 					Produto.estoque[indice].numeros_de_serie.remove(produto)
