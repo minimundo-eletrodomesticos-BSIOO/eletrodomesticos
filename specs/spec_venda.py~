@@ -1,10 +1,8 @@
 #-*-coding:utf-8-*-
 import sys
-
-sys.path.append('../app/')
-
 import unittest
 from should_dsl import should
+sys.path.append('app')
 from produto import Produto
 from venda import Venda
 from cliente import Cliente
