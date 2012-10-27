@@ -33,7 +33,7 @@ class Test_Trocar_Spec(unittest.TestCase):
 		self.troca = Troca("26/11/2015", "Não liga","Tu", "Tua Residencia",'Samsung Galaxy', 'LG', 'I8150','LKJ#2' )
 		self.troca.fazer_uma_troca() |should| equal_to("Produto não encontrado")
 		
-		#troca.registro_de_trocados[1] |should| equal_to('HWWx3')
+		troca.registro_de_trocados[1] |should| equal_to('HWWx3')
 	
 	
 
