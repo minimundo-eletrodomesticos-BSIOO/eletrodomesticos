@@ -16,20 +16,18 @@ data_via_string):
 		self.descricao_prod = descricao_prod
 		self.marca_prod = marca_prod
 		self.modelo_prod = modelo_prod
-		self.data_da_compra = date(int(data_via_string[6:10]),int(data_via_string[3:5]),
-int(data_via_string[0:2]))
+		self.data_da_compra = date.today()
 		Venda._salvar_vendas(self)
 			
 	@classmethod
 	def _salvar_vendas(cls, conteudo):
 		Venda.lista_vendas_1.append(conteudo)
 
-	def consultar_garantia(self, data_via_string):
-		ano_garantia = date.today().year + 1
+	def consultar_garantia(self, data_object):
+		ano_garantia = self.data_da_compra.year + 1
 		data_garantia = date(ano_garantia, self.data_da_compra.month, self.data_da_compra.day)
-		data = date(int(data_via_string[6:10]),int(data_via_string[3:5]),
-		int(data_via_string[0:2]))
-		if data <= data_garantia:
+		data_object = date(int(data_object[6:10]),int(data_object[3:5]),int(data_object[0:2]))
+		if data_object <= data_garantia:
 			return "Ainda está na garantia!"
 		else:
 			return "Esta fora da garantia"

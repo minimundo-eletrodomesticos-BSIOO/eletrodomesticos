@@ -32,7 +32,7 @@ class Troca(object):
 		data_str = self.data_da_troca.strftime("%d/%m/%Y")
 		for venda in range(len(Venda.lista_vendas_1)):
 			if self.marca_prod == Venda.lista_vendas_1[venda].marca_prod:
-				if Venda.lista_vendas_1[venda].consultar_garantia(data_str) == "Ainda está na garantia!":
+				if Venda.lista_vendas_1[venda].consultar_garantia(data_str) = "Ainda está na garantia!":
 					if Produto.estoque[venda].modelo == self.modelo_prod:
 						Troca.registro_de_trocados.append(Produto.estoque[venda].numeros_de_serie[-1])
 						produto = str(Produto.estoque[venda].numeros_de_serie[-1])
