@@ -22,7 +22,8 @@ data_via_string):
 	@classmethod
 	def _salvar_vendas(cls, conteudo):
 		Venda.lista_vendas_1.append(conteudo)
-
+	
+	#consultar_garantia irá receeber uma data_object que será a data do dia que se desejara fazer a consulta
 	def consultar_garantia(self, data_object):
 		ano_garantia = self.data_da_compra.year + 1
 		data_garantia = date(ano_garantia, self.data_da_compra.month, self.data_da_compra.day)
