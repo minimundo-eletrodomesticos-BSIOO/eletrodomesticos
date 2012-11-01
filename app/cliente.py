@@ -5,6 +5,7 @@ class Cliente(object):
 	def __init__(self,nome, endereco):
 		self.nome = nome
 		self.endereco = endereco
+		self.cliente_estrela? = True
 		Cliente.insert_clientes(self)
 		
 
@@ -15,3 +16,11 @@ class Cliente(object):
 		
 	def consulta_clientes(self):
 		return (self.nome, self.endereco)
+		
+	@classmethod
+	def clientes_com_sorte(cls):
+		registro = ""
+		for indice in range(len(Cliente.relacao_clientes)):
+			if Cliente.relacao_clientes[indice].cliente_estrela? == True:
+				registro += "Nome: "+Cliente.relacao_clientes[indice].nome+"\nEndereco: "+Cliente.relacao_clientes[indice].endereco+"\n"
+				return registro
