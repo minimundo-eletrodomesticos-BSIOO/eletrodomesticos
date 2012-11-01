@@ -30,17 +30,21 @@ class Troca(object):
 	
 	def fazer_uma_troca(self):
 		data_str = self.data_da_troca.strftime("%d/%m/%Y")
-		for venda in range(len(Venda.lista_vendas_1)):
-			if self.marca_prod == Venda.lista_vendas_1[venda].marca_prod:
-				if Venda.lista_vendas_1[venda].consultar_garantia(data_str) == "Ainda está na garantia!":
-					if Produto.estoque[venda].modelo == self.modelo_prod:
-						Troca.registro_de_trocados.append(Produto.estoque[venda].numeros_de_serie[-1])
-						produto = str(Produto.estoque[venda].numeros_de_serie[-1])
-						Produto.estoque[venda].numeros_de_serie.remove(produto)
+		for troca in range(len(Venda.lista_vendas_1)):
+			if self.nome_cliente_q_comprou == Cliente.relacao_clientes[troca].nome:
+				Cliente.relacao_clientes[troca].cliente_estrela? = False
+				if self.marca_prod == Venda.lista_vendas_1[troca].marca_prod and Produto.estoque[troca].modelo == self.modelo_prod:
+					if Venda.lista_vendas_1[troca].consultar_garantia(data_str) == "Ainda está na garantia!":
+						Troca.registro_de_trocados.append(Produto.estoque[troca].numeros_de_serie[-1])
+						produto = str(Produto.estoque[troca].numeros_de_serie[-1])
+						Produto.estoque[troca].numeros_de_serie.remove(produto)
 						return "Produto Trocado"
 					else:
-						return "Modelo imcompativel"
+						return "Tempo de Garantia acabou"
 				else:
-					 return "Garantia acabou"
+					return "Produto nao encontrado"
 			else:
-				return "Produto não encontrado"
+				return "Cliente nao encontrado"
+
+	
+	
