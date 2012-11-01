@@ -4,12 +4,16 @@ class Produto(object):
 	estoque = []
 	numeros_de_serie = []
 	def __init__(self,descricao ,marca, modelo,  quantidade):
-		self.descricao = descricao
-		self.marca = marca
-		self.modelo = modelo
-		self.quantidade = quantidade
+		if quantidade <= 0:
+			raise ValueError, "No permitido"
+		else:
+			self.descricao = descricao
+			self.marca = marca
+			self.modelo = modelo
+			self.quantidade = quantidade
+			Produto._armazena_aparelhos(self)
 
-		Produto._armazena_aparelhos(self)
+		
 
 	@classmethod
 	def _armazena_aparelhos(cls, itens):
