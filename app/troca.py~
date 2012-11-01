@@ -31,7 +31,7 @@ class Troca(object):
 	def fazer_uma_troca(self):
 		data_str = self.data_da_troca.strftime("%d/%m/%Y")
 		for troca in range(len(Venda.lista_vendas_1)):
-			if self.nome_cliente_q_comprou == Cliente.relacao_clientes[troca].nome or self.nome_cliente_q_trocou == Cliente.relacao_clientes[troca].nome:
+			if self.nome_cliente_q_comprou == Cliente.relacao_clientes[troca].nome:
 				Cliente.relacao_clientes[troca].cliente_estrela = False
 				if self.marca_prod == Venda.lista_vendas_1[troca].marca_prod and Produto.estoque[troca].modelo == self.modelo_prod:
 					if Venda.lista_vendas_1[troca].consultar_garantia(data_str) == "Ainda está na garantia!":

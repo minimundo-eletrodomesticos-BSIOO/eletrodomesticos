@@ -39,7 +39,6 @@ class Venda(object):
 					self.lista_vendas_2.append(Produto.estoque[indice].numeros_de_serie[-1])
 					produto = str(Produto.estoque[indice].numeros_de_serie[-1])
 					Produto.estoque[indice].numeros_de_serie.remove(produto)
-					return "Produto Vendido"
 				else:
 					return "impossivel vender"
 	
